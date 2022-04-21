@@ -19,7 +19,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <center>
-                                           <h4>Publisher Details</h4>
+                                           <h4>Информация за издатели</h4>
                                         </center>
                                     </div>
                                 </div>
@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <label>Publisher ID</label>
+                                        <label>ID на издател</label>
                                         <div class="form-group">
                                             <div class="input-group">
                                             <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="ID"></asp:TextBox>
@@ -48,9 +48,9 @@
                                             </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <label>Publisher Name</label>
+                                        <label>Име на издател</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Publisher Name"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Име"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -59,17 +59,17 @@
                                 <div class="row">
                                     <div class ="col-4">
                                         <div class="d-grid gap-2">
-                                        <asp:Button  class="btn btn-success " ID="Button3" runat="server" Text="Add" OnClick="Button3_Click" />
+                                        <asp:Button  class="btn btn-success " ID="Button3" runat="server" Text="Добави" OnClick="Button3_Click" />
                                         </div>
                                     </div>
                                     <div class ="col-4">
                                         <div class="d-grid gap-2">
-                                        <asp:Button  class="btn btn-warning  " ID="Button4" runat="server" Text="Update" OnClick="Button4_Click" />
+                                        <asp:Button  class="btn btn-warning  " ID="Button4" runat="server" Text="Актуализирай" OnClick="Button4_Click" />
                                         </div>
                                     </div>
                                      <div class ="col-4">
                                          <div class="d-grid gap-2">
-                                        <asp:Button  class="btn btn-danger " ID="Button5" runat="server" Text="Delete" OnClick="Button5_Click" />
+                                        <asp:Button  class="btn btn-danger " ID="Button5" runat="server" Text="Изтрий" OnClick="Button5_Click" />
                                          </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <center>
-                                           <h4>Publisher List</h4>
+                                           <h4>Списък с издатели</h4>
                                         </center>
                                     </div>
                                 </div>
@@ -111,9 +111,9 @@
                                         
                                         <asp:GridView class="table table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="publisher_id" DataSourceID="SqlDataSource1">
                                             <Columns>
-                                                <asp:BoundField DataField="publisher_id" HeaderText="Publisher ID" ReadOnly="True" SortExpression="publisher_id" />
-                                                <asp:BoundField DataField="publisher_name" HeaderText="Publisher Name" SortExpression="publisher_name" />
-                                                <asp:BoundField DataField="publisher_history" HeaderText="Publisher History" SortExpression="publisher_history" />
+                                                <asp:BoundField DataField="publisher_id" HeaderText="ID" ReadOnly="True" SortExpression="publisher_id" />
+                                                <asp:BoundField DataField="publisher_name" HeaderText="Име" SortExpression="publisher_name" />
+                                                <asp:BoundField DataField="publisher_history" HeaderText="История за издателя" SortExpression="publisher_history" />
                                             </Columns>
                                         </asp:GridView>
                                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:elibrary_DBConnectionString %>" SelectCommand="SELECT * FROM [publisher]"></asp:SqlDataSource>

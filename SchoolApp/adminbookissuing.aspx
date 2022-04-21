@@ -20,7 +20,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <center>
-                                           <h4>Book Issuing</h4>
+                                           <h4>Издаване на книги</h4>
                                         </center>
                                     </div>
                                 </div>
@@ -41,20 +41,20 @@
                                 <div class="row">
 
                                     <div class="col-md-6">
-                                        <label>Member ID</label>
+                                        <label>Име на клиент</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Member ID"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Потребителско име"></asp:TextBox>
                                         </div>
 
 
                                     </div>
 
                                     <div class="col-md-6">
-                                        <label>Book ID</label>
+                                        <label>ID на книгата</label>
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Book ID"></asp:TextBox>
-                                                <asp:Button class="btn btn-dark" ID="Button2" runat="server" Text="Search" OnClick="Button2_Click" />
+                                                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="ID"></asp:TextBox>
+                                                <asp:Button class="btn btn-dark" ID="Button2" runat="server" Text="Търси" OnClick="Button2_Click" />
                                             </div>
                                         </div>
                                     </div>
@@ -64,16 +64,16 @@
                                 <div class="row">
 
                                     <div class="col-md-6">
-                                        <label>Member Name</label>
+                                        <label>Име на клиент</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Member ID" ReadOnly="True"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Потребителско име" ReadOnly="True"></asp:TextBox>
                                         </div>
                                     </div>
 
                                      <div class="col-md-6">
-                                        <label>Book Name</label>
+                                        <label>Име на книга</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Book Name" ReadOnly="True"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Име на книга" ReadOnly="True"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -83,16 +83,16 @@
                                  <div class="row">
 
                                     <div class="col-md-6">
-                                        <label>Start Date</label>
+                                        <label>Начална дата</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Start Date" TextMode="Date"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Начало" TextMode="Date"></asp:TextBox>
                                         </div>
                                     </div>
 
                                      <div class="col-md-6">
-                                        <label>End Date</label>
+                                        <label>Дата за връщане</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="End Date" TextMode="Date"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Край" TextMode="Date"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -101,12 +101,12 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="d-grid gap-2">
-                                        <asp:Button class="btn btn-primary" ID="Button3" runat="server" Text="Issue" OnClick="Button3_Click" />
+                                        <asp:Button class="btn btn-primary" ID="Button3" runat="server" Text="Дай под наем" OnClick="Button3_Click" />
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="d-grid gap-2">
-                                        <asp:Button class="btn btn-success" ID="Button4" runat="server" Text="Return" OnClick="Button4_Click" />
+                                        <asp:Button class="btn btn-success" ID="Button4" runat="server" Text="Върни книга" OnClick="Button4_Click" />
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <center>
-                                           <h4>Issued Book List</h4>
+                                           <h4>Списък с наети книги</h4>
                                         </center>
                                     </div>
                                 </div>
@@ -139,17 +139,14 @@
                                 <div class="row">
                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibrary_DBConnectionString %>' SelectCommand="SELECT * FROM [book_issuing]"></asp:SqlDataSource>
                                     <div class="col">
-
-                                        
-
                                         <asp:GridView class="table table table-hover" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowDataBound="GridView1_RowDataBound">
                                             <Columns>
-                                                <asp:BoundField DataField="member_id" HeaderText="ID" SortExpression="member_id"></asp:BoundField>
-                                                <asp:BoundField DataField="member_name" HeaderText="Member Name" SortExpression="member_name"></asp:BoundField>
-                                                <asp:BoundField DataField="book_id" HeaderText="Book ID" SortExpression="book_id"></asp:BoundField>
-                                                <asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name"></asp:BoundField>
-                                                <asp:BoundField DataField="issue_date" HeaderText="Issue Date" SortExpression="issue_date"></asp:BoundField>
-                                                <asp:BoundField DataField="due_date" HeaderText="Due Date" SortExpression="due_date"></asp:BoundField>
+                                                <asp:BoundField DataField="member_id" HeaderText="Потребителско име" SortExpression="member_id"></asp:BoundField>
+                                                <asp:BoundField DataField="member_name" HeaderText="Истинско име" SortExpression="member_name"></asp:BoundField>
+                                                <asp:BoundField DataField="book_id" HeaderText="ID на книга" SortExpression="book_id"></asp:BoundField>
+                                                <asp:BoundField DataField="book_name" HeaderText="Име на книга" SortExpression="book_name"></asp:BoundField>
+                                                <asp:BoundField DataField="issue_date" HeaderText="Начална дата" SortExpression="issue_date"></asp:BoundField>
+                                                <asp:BoundField DataField="due_date" HeaderText="Крайна дата" SortExpression="due_date"></asp:BoundField>
                                             </Columns>
                                         </asp:GridView>
 

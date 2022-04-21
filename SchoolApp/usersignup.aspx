@@ -61,7 +61,6 @@
                                             <label>Областен град</label>
                                             <div class="form-group">
                                                 <asp:DropDownList ID="DropDownList1" class="form-control" runat="server">
-                                                    
                                                     <asp:ListItem Text="Sofia" Value="Sofia" />
                                                     <asp:ListItem Text="Plovdiv" Value="Plovdiv" />
                                                     <asp:ListItem Text="Varna" Value="Varna" />

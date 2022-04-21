@@ -67,7 +67,7 @@
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="ID"></asp:TextBox>      
-                                                <asp:Button class="form-control btn btn-primary" ID="Button3" runat="server" Text="Go" OnClick="Button3_Click" />
+                                                <asp:Button class="form-control btn btn-primary" ID="Button3" runat="server" Text="Търси" OnClick="Button3_Click" />
                                             </div>
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@
                                     <div class="col-md-8">
                                         <label>Име на книгата</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control ms-1" ID="TextBox1" runat="server" placeholder="Book Name"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control ms-1" ID="TextBox1" runat="server" placeholder="Име на книгата"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -91,12 +91,12 @@
 
                                                 <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
 
-                                                    <asp:ListItem Text="Bulgarian" Value="Bulgarian" />
-                                                    <asp:ListItem Text="English" Value="English" />
-                                                    <asp:ListItem Text="German" Value="German" />
-                                                    <asp:ListItem Text="French" Value="French" />
-                                                    <asp:ListItem Text="Chinese" Value="Chinese" />
-                                                    <asp:ListItem Text="Japanese" Value="Japanese" />
+                                                    <asp:ListItem Text="Български" Value="Български" />
+                                                    <asp:ListItem Text="Английски" Value="Английски" />
+                                                    <asp:ListItem Text="Немски" Value="Немски" />
+                                                    <asp:ListItem Text="Френски" Value="Френски" />
+                                                    <asp:ListItem Text="Китайски" Value="Китайски" />
+                                                    <asp:ListItem Text="Японски" Value="Японски" />
 
                                                 </asp:DropDownList>
 
@@ -127,8 +127,8 @@
 
                                                 <asp:DropDownList class="form-control" ID="DropDownList2" runat="server">
 
-                                                    <asp:ListItem Text="A2" Value="A2" />
-                                                    <asp:ListItem Text="A1" Value="A1" />
+                                                    <asp:ListItem Text="" Value="" />
+                                                    
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
@@ -185,7 +185,7 @@
                                         <label>Издание</label>
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Edition"></asp:TextBox>
+                                                <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Издание"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -193,14 +193,14 @@
                                     <div class="col-md-4">
                                         <label>Цена</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Book cost" TextMode="Number"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Цена" TextMode="Number"></asp:TextBox>
                                         </div>
                                     </div>
 
                                     <div class="col-md-4">
                                         <label>Страници</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Pages" TextMode="Number"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Брой страници" TextMode="Number"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -212,7 +212,7 @@
                                         <label>Наличност</label>
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Actual Stock"></asp:TextBox>
+                                                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Наличност"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -220,14 +220,14 @@
                                     <div class="col-md-4">
                                         <label>Налични</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Current Stock" ReadOnly="True"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="" ReadOnly="True"></asp:TextBox>
                                         </div>
                                     </div>
 
                                     <div class="col-md-4">
-                                        <label>Issued Book</label>
+                                        <label>Наети</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Issued Book" ReadOnly="True"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="" ReadOnly="True"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -237,7 +237,7 @@
                                     <div class="col-md-12">
                                         <label>Описание</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox14" runat="server" placeholder="Book Description" TextMode="MultiLine" Rows="2"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox14" runat="server" placeholder="Описание" TextMode="MultiLine" Rows="2"></asp:TextBox>
                                         </div>
                                     </div>
 

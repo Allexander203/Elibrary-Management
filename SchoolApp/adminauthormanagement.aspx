@@ -20,7 +20,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <center>
-                                           <h4>Author Details</h4>
+                                           <h4>Информация за автора</h4>
                                         </center>
                                     </div>
                                 </div>
@@ -40,18 +40,18 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <label>Author ID</label>
+                                        <label>ID на автора</label>
                                         <div class="form-group">
                                             <div class="input-group">
                                             <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="ID"></asp:TextBox>
-                                                <asp:Button class="btn btn-primary" ID="Button2"  runat="server" OnClick="Button2_Click" Text="Search" />
+                                                <asp:Button class="btn btn-primary" ID="Button2"  runat="server" OnClick="Button2_Click" Text="Търси" />
                                                 </div>
                                             </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <label>Author Name</label>
+                                        <label>Име на автора</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Author Name"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Име"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -60,17 +60,17 @@
                                <div class="row">
                                     <div class ="col-4">
                                         <div class="d-grid gap-2">
-                                        <asp:Button  class="btn btn-success " ID="Button3" runat="server" Text="Add" OnClick="Button3_Click" />
+                                        <asp:Button  class="btn btn-success " ID="Button3" runat="server" Text="Добави" OnClick="Button3_Click" />
                                         </div>
                                     </div>
                                     <div class ="col-4">
                                         <div class="d-grid gap-2">
-                                        <asp:Button  class="btn btn-warning  " ID="Button4" runat="server" Text="Update" OnClick="Button4_Click" />
+                                        <asp:Button  class="btn btn-warning  " ID="Button4" runat="server" Text="Актуализирай" OnClick="Button4_Click" />
                                         </div>
                                     </div>
                                      <div class ="col-4">
                                          <div class="d-grid gap-2">
-                                        <asp:Button  class="btn btn-danger " ID="Button1" runat="server" Text="Delete" OnClick="Button1_Click" />
+                                        <asp:Button  class="btn btn-danger " ID="Button1" runat="server" Text="Изтрий" OnClick="Button1_Click" />
                                          </div>
                                     </div>
                                 </div>
@@ -98,8 +98,8 @@
                                 <div class="row">
                                     <div class="col">
                                         <center>
-                                           <h4>Your Issued Books</h4>
-                                                <asp:Label class="badge rounded-pill bg-info text-dark" ID="Label2" runat="server" Text="Your books info"></asp:Label>
+                                           <h4>Информация</h4>
+                                                <asp:Label class="badge rounded-pill bg-info text-dark" ID="Label2" runat="server" Text="Информация за авторите"></asp:Label>
                                         </center>
                                     </div>
                                 </div>
@@ -114,8 +114,8 @@
                                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:elibrary_DBConnectionString %>" SelectCommand="SELECT * FROM [author]"></asp:SqlDataSource>
                                         <asp:GridView class="table table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="author_id" DataSourceID="SqlDataSource1">
                                             <Columns>
-                                                <asp:BoundField DataField="author_id" HeaderText="Author ID" ReadOnly="True" SortExpression="author_id" />
-                                                <asp:BoundField DataField="author_name" HeaderText="Author Name" SortExpression="author_name" />
+                                                <asp:BoundField DataField="author_id" HeaderText="ID на автор" ReadOnly="True" SortExpression="author_id" />
+                                                <asp:BoundField DataField="author_name" HeaderText="Име на автора" SortExpression="author_name" />
                                             </Columns>
                                         </asp:GridView>
                                         
